@@ -30,6 +30,9 @@ include(common)
 add_executable(user-edit-history user_edit_history.cpp)
 target_link_libraries(user-edit-history ${Boost_LIBRARIES} ${OSMIUM_LIBRARIES})
 
+add_executable(user-tag-edit-history user_tag_edit_history.cpp)
+target_link_libraries(user-tag-edit-history ${Boost_LIBRARIES} ${OSMIUM_LIBRARIES})
+
 add_executable(user-uid-name-map user_uid_name_map.cpp)
 target_link_libraries(user-uid-name-map ${Boost_LIBRARIES} ${OSMIUM_LIBRARIES})
 
