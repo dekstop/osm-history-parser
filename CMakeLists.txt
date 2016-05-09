@@ -33,6 +33,9 @@ target_link_libraries(user-edit-history ${Boost_LIBRARIES} ${OSMIUM_LIBRARIES})
 add_executable(user-tag-edit-history user_tag_edit_history.cpp)
 target_link_libraries(user-tag-edit-history ${Boost_LIBRARIES} ${OSMIUM_LIBRARIES})
 
+add_executable(user-deletion-history user_deletion_history.cpp)
+target_link_libraries(user-deletion-history ${Boost_LIBRARIES} ${OSMIUM_LIBRARIES})
+
 add_executable(way-node-history way_node_history.cpp)
 target_link_libraries(way-node-history ${Boost_LIBRARIES} ${OSMIUM_LIBRARIES})
 
