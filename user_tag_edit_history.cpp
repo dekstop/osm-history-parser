@@ -56,6 +56,9 @@ public:
             m_nodefile <<
                 node.id() << "\t" <<
                 node.version() << "\t" <<
+                node.changeset() << "\t" <<
+                node.timestamp().to_iso() << "\t" <<
+                node.uid() << "\t" <<
                 escape(tag.key()) << "\t" <<
                 escape(tag.value()) << std::endl;
         }
@@ -69,6 +72,9 @@ public:
             m_wayfile <<
                 way.id() << "\t" <<
                 way.version() << "\t" <<
+                way.changeset() << "\t" <<
+                way.timestamp().to_iso() << "\t" <<
+                way.uid() << "\t" <<
                 escape(tag.key()) << "\t" <<
                 escape(tag.value()) << std::endl;
         }
@@ -82,6 +88,9 @@ public:
             m_relfile <<
                 rel.id() << "\t" <<
                 rel.version() << "\t" <<
+                rel.changeset() << "\t" <<
+                rel.timestamp().to_iso() << "\t" <<
+                rel.uid() << "\t" <<
                 escape(tag.key()) << "\t" <<
                 escape(tag.value()) << std::endl;
         }
