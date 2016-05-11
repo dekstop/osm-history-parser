@@ -43,10 +43,11 @@ public:
         if (node.location()) {
             m_nodefile <<
                 node.location().lat() << "\t" <<
-                node.location().lon() << std::endl;
+                node.location().lon() << "\t";
         } else {
-            m_nodefile << "\t" << std::endl;
+            m_nodefile << "\t\t";
         }
+        m_nodefile << node.visible() << std::endl;
     }
 
     void way(const osmium::Way& way) {
@@ -58,7 +59,8 @@ public:
             way.version() << "\t" <<
             way.changeset() << "\t" <<
             way.timestamp().to_iso() << "\t" <<
-            way.uid() << std::endl;
+            way.uid() << "\t" <<
+            way.visible() << std::endl;
     }
 
     void relation(const osmium::Relation& rel) {
@@ -70,7 +72,8 @@ public:
             rel.version() << "\t" <<
             rel.changeset() << "\t" <<
             rel.timestamp().to_iso() << "\t" <<
-            rel.uid() << std::endl;
+            rel.uid() << "\t" <<
+            rel.visible() << std::endl;
     }
 };
 
